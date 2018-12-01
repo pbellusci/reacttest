@@ -8,8 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('background.jpg') !important;
   background-repeat: repeat;
-}
 
+}
+html {
+  background-color: #f9fcff!important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -28,7 +31,7 @@ code {
 .white-content {
   border:1px solid #e3e5e8;
   background:white;
-  padding:5px;
+  padding:20px;
 }
 
 .middle-content {
@@ -53,6 +56,10 @@ code {
   width: 68px;
 }
 
-.text-content {
-  padding:20px 0;
+.links-navigation a:hover {
+  text-decoration: none;
+  color:#0dbadf;
+}
+.links-navigation a{
+  color: #3a3a3a;
 }

@@ -41,6 +41,9 @@ export default class Invoice extends React.Component {
                 <section>
                     <InvoiceBody/>
                 </section>
+                <section>
+                    <InvoiceOverview/>
+                </section>
             </React.Fragment>
         );
     }
@@ -113,9 +116,6 @@ class InvoiceHeader extends Invoice {
                         {this.balance}
                     </div>
                 </div>
-
-
-
             </div>
         );
     }
@@ -144,14 +144,9 @@ class InvoiceBody extends Invoice {
                 <br/>
                 <div className="row">
                     <div className="float-right col-xs-12 col-md-12 col-lg-12 text-right">
-                        <nav>
-                            <button type="button" data-type="diagram" className="btn btn-light border-grey" onClick={this.toggleMapView.bind(this)}>Diagram</button>
-                            <button type="button" data-type="map" className="btn btn-light border-grey" onClick={this.toggleMapView.bind(this)}>Map</button>
-                        </nav>
+                        <button type="button" data-type="diagram" className="btn btn-light border-grey" onClick={this.toggleMapView.bind(this)}>Diagram</button>
+                        <button type="button" data-type="map" className="btn btn-light border-grey" onClick={this.toggleMapView.bind(this)}>Map</button>
                     </div>
-                </div>
-                <br/>
-                <div className="row">
                     <div className="text-center col-xs-12 col-md-12">
                         <h5>Text</h5>
                     </div>
@@ -209,79 +204,77 @@ class InvoiceOverview extends Invoice {
     render() {
 
         return (
-            <div className="col-centered col-xs-12 col-md-12 col-lg-12">
-                <div className="float-left col-md-6">
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Status
+            <div className="col-xs-12 col-md-12 col-lg-12 white-content float-left">
+                <div className="col-lg-12 float-left">
+                    <div className="float-left col-md-6 col-lg-6">
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Status
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.status}
+                            </div>
                         </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.status}
+
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Method
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.method}
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Capacity
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.capacity}
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Drayage
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.drayage}
+                            </div>
                         </div>
                     </div>
+                    <div className="float-left col-md-6 col-lg-6">
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Incoterms
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.incoterms}
+                            </div>
+                        </div>
 
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Method
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Service Options
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.service_options}
+                            </div>
                         </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.method}
+
+                        <div className="row">
+                            <div className="col-xs-6 col-md-6 float-left text-left">
+                                Hazardous or forbidden commodities
+                            </div>
+                            <div className="col-xs-6 col-md-6 float-left text-right">
+                                {this.overview.hazardous}
+                            </div>
                         </div>
+
                     </div>
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Capacity
-                        </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.capacity}
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Drayage
-                        </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.drayage}
-                        </div>
-                    </div>
-
-                </div>
-                <div className="float-left col-md-6">
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Incoterms
-                        </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.incoterms}
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Service Options
-                        </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.service_options}
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-xs-6 col-md-6 float-left text-left">
-                            Hazardous or forbidden commodities
-                        </div>
-                        <div className="col-xs-6 col-md-6 float-left text-right">
-                            {this.overview.hazardous}
-                        </div>
-                    </div>
-
-                </div>
-                <div className="float-left col-md-6">
                 </div>
             </div>
+
         );
     }
 }
