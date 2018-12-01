@@ -10,6 +10,9 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -22,10 +25,45 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
+    <div class="col-xs-12 col-md-10 col-sm-12 col-lg-10 col-centered">
+      <noscript>
+        You need to enable JavaScript to run this app.
+      </noscript>
+      <header>
+        <div class="float-left col-xs-12 col-md-12 col-lg-12 header-navigation">
+          <div class="float-left col-xs-8 col-md-8 col-lg-8">
+            <nav>
+              <ul>
+                <li class="list-inline-item"><a href="#"> Image </a></li>
+                <li class="list-inline-item"><a href="#"> Dashboard </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+                <li class="list-inline-item"><a href="#"> Billing </a></li>
+                <li class="list-inline-item"><a href="#"> Network </a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="float-right text-right col-xs-4 col-md-4 col-lg-4">
+
+            <nav>
+              <ul>
+                <li class="list-inline-item"><a href="#"> <i class="fas fa-search"></i> </a></li>
+                <li class="list-inline-item"><a href="#"> <i class="fas fa-question"></i></a></li>
+                <li class="list-inline-item"><a href="#"> <i class="fas fa-bell"></i></a></li>
+                <li class="list-inline-item"><a href="#"> <i class="fab fa-node-js"></i> </a></li>
+              </ul>
+            </nav>
+
+          </div>
+          </div>
+      </header>
+      <main>
+        <div id="root" class="float-left col-xs-12 col-md-12 col-lg-12"></div>
+      </main>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

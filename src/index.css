@@ -6,9 +6,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('background.jpg') !important;
+  background-repeat: repeat;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.col-centered {
+  margin: 0 auto;
+  float:none;
+}
+
+.header-navigation {
+  padding: 20px 0;
+  margin: 20px 0 0 0;
+}
+
+.white-content {
+  border:1px solid #e3e5e8;
+  background:white;
+  padding:5px;
+}
+
+.middle-content {
+  border-left:1px solid #e3e5e8;
+  border-right:1px solid #e3e5e8;
+}
+
+
+.border-grey {
+  border:1px solid #e3e5e8!important;
+}
+
+#map-wrapper {
+  background-color: white;
+}
+.circle {
+  border-radius: 100%;
+  background: white;
+  border: 2px solid #e3e5e8;
+  padding:20px;
+  margin: 0 20px;
+  width: 68px;
+}
+
+.text-content {
+  padding:20px 0;
 }
