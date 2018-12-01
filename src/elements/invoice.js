@@ -83,8 +83,17 @@ class InvoiceHeader extends Invoice {
                             </div>
                         </div>
                     </div>
+                    <div class="pull-left col-md-6">
+                        <h2> Bill to </h2>
+                            {this.billing_information.address}
+                            <br/>
+                            {this.billing_information.phone}
+                            <br/>
+                            {this.billing_information.name}
+                    </div>
                     <div class="pull-left col-md-3">
-
+                        <h2> New Balance upone Re-booking </h2>
+                            {this.balance}
                     </div>
 
                 </fieldset>
